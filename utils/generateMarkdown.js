@@ -1,11 +1,12 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
+  
   return `# ${data.title}
-  ![GitHub license](${licenseURL})
+  !${data.license}
 
   ## Description
 
-  ${description}
+  ${data.description}
 
   ## Table of Contents
 
@@ -20,40 +21,32 @@ function generateMarkdown(data) {
   * [Tests](#tests)
 
   * [Questions](#questions)
-
-  ## Installation
-
-  ${install}
-
-  ## Usage
-
-  ${use}
-
-  ## Contributing
-
-  ${contribution}
-
+  
   ## Installation
 
   To run, install using the following command:
   \`\`\`
-  ${install}
+  ${data.install}
   \`\`\`
-  
+
+  ## Usage
+
+  For use: ${data.use}
+  ${data.collaborators || data.TPAssets ? "\n##Credits" : ""} ${data.collaborators ? "\n\nCollaborators:\n\n" + data.collaboratorsList : ""} ${data.TPAssets ? "\n\n3rd Party Assets:\n\n" + TPAssetsList : ""}
+  ## Contributing
+
+  ${data.contribution}
 
   ## Tests
 
   To run tests, run the following command:
   \`\`\`
-  ${test}
+  ${data.test}
   \`\`\`
 
+  ## Questions?
 
-
-
-
-
-
+  If you have any questions or issues please contact me via email at ${data.email}. You can find more examples of my work at [${data.user}](https://github.com/${data.user})
 `;
 }
 
