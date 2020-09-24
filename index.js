@@ -1,5 +1,10 @@
+const fs = require("fs")
+const inquirer = require("inquirer")
+const generateMarkdown = require("./utils/generateMarkdown")
+
+
 // array of questions for user
-const questions = [
+inquirer.prompt([
     {
         type: 'input',
         name: 'username',
@@ -57,11 +62,15 @@ const questions = [
         name: 'contribution',
         message: "What does the user need to know about contributing the repo?",
     },
-];
+])
+    .then(function(answer){
+        let generatedM = generateMarkdown(answer);
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+        fs.writeFile('generatedREADME.md', generatedM, (err) => {
+            if (err) throw err;
+            console.log('The file has been saved!');
+        });
+    });
 
 // function to initialize program
 function init() {
