@@ -29,7 +29,7 @@ inquirer.prompt([
         type: "list",
         name: "license",
         message: "What kind of license would you like?",
-        choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
+        choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "no"],
     },
     {
         type: "input",
@@ -59,24 +59,55 @@ inquirer.prompt([
     },
     {
         type: "confirm",
-        name: "collaborators",
+        name: "credits",
         message: "Did you work on this with collaborators?",
     },
     {
         type: "input",
-        name: "collaboratorList",
-        message: inquirer.prompt(),
+        name: "collaborators",
+        message: "Who is your collaborator?",
     },
 ])
-    .then(function(answer){
+    .then(function (answer) {
         let generatedM = generateMarkdown(answer);
-        console.log(generatedM)
+        console.log(answer)
 
         fs.writeFile("generatedREADME.md", generatedM, (err) => {
             if (err) throw err;
             console.log("The file has been saved!");
         });
     });
+
+// function collabFunc() {
+
+//     let temp = "hello"
+//     let nextQ = false
+
+//     inquirer.prompt([
+//             {
+//                 type: "input",
+//                 name: "colab",
+//                 message: "What is their name?",
+//             },
+//             {
+//                 type: "input",
+//                 name: "colabGitHub",
+//                 message: "What is their GitHub username?",
+//             },
+//             {
+//                 type: "confirm",
+//                 name: "next",
+//                 message: "Do you have another collaborator?",
+//             },
+//         ])
+//         .then(function (smallAnswer) {
+//             temp = temp + "\n" + smallAnswer.colab + "   @ [" + smallAnswer.colabGitHub + "](https://github.com/" + smallAnswer.colabGitHub + ")"
+
+//             nextQ = smallAnswer.next
+//         });
+
+//     return temp
+// }
 
 // function to initialize program
 function init() {

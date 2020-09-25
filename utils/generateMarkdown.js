@@ -2,7 +2,7 @@
 function generateMarkdown(data) {
   
   return `# ${data.title}
-  !${data.license}
+  ${data.license == "MIT" ? "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)" : ""}${data.license == "APACHE 2.0" ? "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)" : ""}${data.license == "GPL 3.0" ? "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)" : ""}${data.license == "BSD 3" ? "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)" : ""}
 
   ## Description
 
@@ -13,7 +13,7 @@ function generateMarkdown(data) {
   * [Installation](#installation)
 
   * [Usage](#usage) 
-
+  ${data.credits ? "\n* [Credits](#credits)\n" : ""}
   * [License](#license)
 
   * [Contributing](#contributing)
@@ -32,7 +32,11 @@ function generateMarkdown(data) {
   ## Usage
 
   For use: ${data.use}
-  ${data.collaborators || data.TPAssets ? "\n##Credits" : ""} ${data.collaborators ? "\n\nCollaborators:\n\n" + data.collaboratorsList : ""} ${data.TPAssets ? "\n\n3rd Party Assets:\n\n" + TPAssetsList : ""}
+  ${data.credits ? "\n  ## Credits\n\n  " + data.collaborators + "\n" : ""}
+  ## License
+
+  This application is protected under a ${data.license} license
+
   ## Contributing
 
   ${data.contribution}
@@ -46,7 +50,7 @@ function generateMarkdown(data) {
 
   ## Questions?
 
-  If you have any questions or issues please contact me via email at ${data.email}. You can find more examples of my work at [${data.user}](https://github.com/${data.user})
+  If you have any questions or issues please contact me via email at ${data.email}. You can find more examples of my work at [${data.username}](https://github.com/${data.username})
 `;
 }
 
