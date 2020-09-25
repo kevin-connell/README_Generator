@@ -65,7 +65,18 @@ inquirer.prompt([
     {
         type: "input",
         name: "collaborators",
-        message: "Who is your collaborator?",
+        message: "What is your collaborator's name?",
+        when: function (answers) {
+            return answers.credits;
+        },
+    },
+    {
+        type: "input",
+        name: "collabGit",
+        message: "What is your collaborator's GitHub username?",
+        when: function (answers) {
+            return answers.credits;
+        },
     },
 ])
     .then(function (answer) {

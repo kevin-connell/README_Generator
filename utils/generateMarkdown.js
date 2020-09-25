@@ -13,7 +13,7 @@ function generateMarkdown(data) {
   * [Installation](#installation)
 
   * [Usage](#usage) 
-  ${data.credits ? "\n* [Credits](#credits)\n" : ""}
+  ${data.credits ? "\n  * [Credits](#credits)\n" : ""}
   * [License](#license)
 
   * [Contributing](#contributing)
@@ -32,7 +32,7 @@ function generateMarkdown(data) {
   ## Usage
 
   For use: ${data.use}
-  ${data.credits ? "\n  ## Credits\n\n  " + data.collaborators + "\n" : ""}
+  ${data.credits ? "\n  ## Credits\n\n  " + data.collaborators + "   @  [" + data.collabGit + "](https://github.com/" + data.collabGit + ")\n" : ""}
   ## License
 
   This application is protected under a ${data.license} license

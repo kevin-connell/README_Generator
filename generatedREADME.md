@@ -1,9 +1,9 @@
-# Bubble Fart
+# Project Title Example
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
 
-  This is a project about bubble fart
+  THis is a descriptiong of a project that I made
 
   ## Table of Contents
 
@@ -11,8 +11,6 @@
 
   * [Usage](#usage) 
   
-* [Credits](#credits)
-
   * [License](#license)
 
   * [Contributing](#contributing)
@@ -30,19 +28,15 @@
 
   ## Usage
 
-  For use: I am sensitive
+  For use: Make sure you install the neccessary files
   
-  ## Credits
-
-  true
-
   ## License
 
   This application is protected under a MIT license
 
   ## Contributing
 
-  take you time, be yourself
+  Ask me first
 
   ## Tests
 
@@ -53,4 +47,4 @@
 
   ## Questions?
 
-  If you have any questions or issues please contact me via email at carmarcucci@gmail.com. You can find more examples of my work at [carmen](https://github.com/carmen)
+  If you have any questions or issues please contact me via email at kevin.t.connell@gmail.com. You can find more examples of my work at [kevinconnell96](https://github.com/kevinconnell96)
