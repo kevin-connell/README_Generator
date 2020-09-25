@@ -1,9 +1,9 @@
-# Project Title Example
+# Test Project Title
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
 
-  THis is a descriptiong of a project that I made
+  This is a test project that has not been made yet
 
   ## Table of Contents
 
@@ -11,6 +11,8 @@
 
   * [Usage](#usage) 
   
+  * [Credits](#credits)
+
   * [License](#license)
 
   * [Contributing](#contributing)
@@ -28,15 +30,19 @@
 
   ## Usage
 
-  For use: Make sure you install the neccessary files
+  For use: Run using NODE
   
+  ## Credits
+
+  Donna Engelberger   @  [Dengelberger](https://github.com/Dengelberger)
+
   ## License
 
   This application is protected under a MIT license
 
   ## Contributing
 
-  Ask me first
+  No contributions on a test project
 
   ## Tests
 

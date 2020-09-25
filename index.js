@@ -81,7 +81,6 @@ inquirer.prompt([
 ])
     .then(function (answer) {
         let generatedM = generateMarkdown(answer);
-        console.log(answer)
 
         fs.writeFile("generatedREADME.md", generatedM, (err) => {
             if (err) throw err;
